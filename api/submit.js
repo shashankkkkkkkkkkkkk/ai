@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-     from: "FenxAI <onboarding@resend.dev>",
+      from: "FenxAI <onboarding@resend.dev>",
       to: ["shashankthamali2099@gmail.com"],
       subject: "New FenxAI Lead",
       html: `
@@ -23,8 +23,9 @@ export default async function handler(req, res) {
     });
 
     return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return res.status(500).json({ error: "Email failed" });
   }
 }
+
