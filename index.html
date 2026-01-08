@@ -1,62 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FenxAI — AI Call Automation</title>
-<meta name="description" content="FenxAI automates business calls using AI. Scalable voice systems today, intelligent digital & physical products tomorrow." />
+  <!-- BASIC SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FenxAI — AI Call Automation for Businesses</title>
+  <meta name="description" content="FenxAI helps businesses automate inbound and outbound calls using AI voice agents. Reduce costs, increase conversions, and scale without hiring." />
 
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="FenxAI — AI Call Automation" />
+  <meta property="og:description" content="AI voice agents that answer, call, and convert for your business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fenxai.com" />
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,sans-serif}
-body{background:#0b0d12;color:#fff}
-header{padding:32px 64px;border-bottom:1px solid #1f2230;display:flex;justify-content:space-between}
-header h1 span{color:#7c7cff}
-main{max-width:1200px;margin:auto;padding:80px 32px}
-.hero{text-align:center;margin-bottom:100px}
-.hero h2{font-size:56px;margin-bottom:20px}
-.hero p{color:#b5b8c5;font-size:18px;max-width:720px;margin:auto}
-.cta{margin-top:40px}
-button{background:#7c7cff;border:none;padding:14px 28px;border-radius:8px;color:#fff;font-size:16px;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:40px}
-.card{background:#121522;border:1px solid #1f2230;padding:24px;border-radius:14px}
-.card h4{margin-bottom:8px}
-.card p{color:#b5b8c5;font-size:14px}
-form{max-width:520px;margin-top:40px}
-input,textarea{width:100%;padding:14px;margin-bottom:12px;background:#0f1220;border:1px solid #1f2230;border-radius:8px;color:#fff}
-footer{text-align:center;padding:32px;border-top:1px solid #1f2230;color:#6f7285;margin-top:80px}
-</style>
+  <!-- PERFORMANCE -->
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.12);
+      --text-muted: #b5b8c5;
+      --accent: #7c7cff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(1200px 600px at 50% -10%, #1a1d2e, var(--bg));
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 32px 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    header span {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 120px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 18px;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .hero button {
+      margin-top: 40px;
+      padding: 16px 36px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #7c7cff, #9a9aff);
+      color: #000;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .hero button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(124,124,255,.4);
+    }
+
+    /* SERVICES */
+    section {
+      margin-bottom: 120px;
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      backdrop-filter: blur(10px);
+      transition: transform .25s ease, border .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(124,124,255,.6);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    /* FORM */
+    .form-wrap {
+      max-width: 560px;
+    }
+
+    form {
+      margin-top: 32px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #9aa0b5;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #7c7cff, #9a9aff);
+      color: #000;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(124,124,255,.4);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-
 <header>
-<h1>Fenx<span>AI</span></h1>
+  <h1>Fenx<span>AI</span></h1>
 </header>
 
-
 <main>
-<section class="hero">
-<h2>AI That Answers, Calls & Converts</h2>
-<p>FenxAI replaces repetitive business calls with intelligent AI voice systems. Built for scale, reliability, and real revenue impact.</p>
-<div class="cta"><button onclick="document.getElementById('contact').scrollIntoView()">Request Demo</button></div>
-</section>
 
+  <!-- HERO -->
+  <section class="hero">
+    <h1>AI That Answers, Calls, and Converts</h1>
+    <p>
+      FenxAI builds AI voice systems that automate customer calls, follow-ups,
+      and bookings so businesses scale without hiring more people.
+    </p>
+    <button onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
+      Request a Demo
+    </button>
+  </section>
 
-<section>
-<h3>Services</h3>
-<div class="grid">
-<div class="card"><h4>Inbound AI Calls</h4><p>24/7 AI voice agents answering customers instantly.</p></div>
-<div class="card"><h4>Outbound Automation</h4><p>Follow-ups, reminders, and lead qualification.</p></div>
-<div class="card"><h4>Sales & Support Bots</h4><p>Human-level conversations trained on your business.</p></div>
-<div class="card"><h4>Custom AI Systems</h4><p>End‑to‑end automation built for your workflows.</p></div>
-</div>
-</section>
+  <!-- SERVICES -->
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Inbound AI Calls</h3>
+        <p>24/7 AI voice agents answering customer calls instantly.</p>
+      </div>
+      <div class="card">
+        <h3>Outbound Automation</h3>
+        <p>Follow-ups, reminders, and lead qualification at scale.</p>
+      </div>
+      <div class="card">
+        <h3>Sales & Support Bots</h3>
+        <p>Human-level conversations trained on your business.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- FORM -->
+  <section id="demo">
+    <h2>Request a Demo</h2>
+    <div class="form-wrap">
+      <form id="fenxaiForm">
+        <input name="name" placeholder="Your Name" required />
+        <input name="email" type="email" placeholder="Business Email" required />
+        <textarea name="message" placeholder="What do you want to automate?"></textarea>
+        <button class="submit-btn" type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
 
-<section id="contact" style="margin-top:100px">
-<h3>Request a Demo</h3>
-<form id="fenxaiForm">
-<input name="name" placeholder="Your Name" required />
-<input name="email" placeholder="Business Email" required />
+</main>
+
+<footer>
+  © 2026 FenxAI. Built for real businesses.
+</footer>
+
+<script>
+document.getElementById("fenxaiForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target));
+  await fetch("/api/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  alert("Thanks! FenxAI will contact you shortly.");
+  e.target.reset();
+});
+</script>
+
+</body>
 </html>
+
