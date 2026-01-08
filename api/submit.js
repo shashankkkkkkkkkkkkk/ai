@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "FenxAI <leads@fenxai.com>",
+     from: "FenxAI <onboarding@resend.dev>",
       to: ["shashankthamali2099@gmail.com"],
       subject: "New FenxAI Lead",
       html: `
